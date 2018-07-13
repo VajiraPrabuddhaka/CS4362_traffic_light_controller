@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/home/vajira/Desktop/CS4362_traffic_light_controller/stateMachine.xst" -ofn "/home/vajira/Desktop/CS4362_traffic_light_controller/stateMachine.syr" 

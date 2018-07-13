@@ -1,0 +1,4 @@
+verilog isim_temp "synchronize.v"
+verilog isim_temp "debounce.v"
+verilog isim_temp "Synchronizer.v"
+verilog isim_temp "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

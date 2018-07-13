@@ -1,0 +1,387 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> 
+Reading design: TimeParameters.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "TimeParameters.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "TimeParameters"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : TimeParameters
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "TimeParameters.v" in library work
+Module <TimeParameters> compiled
+No errors in compilation
+Analysis of file <"TimeParameters.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <TimeParameters> in library <work> with parameters.
+	BASE_SELECT = "00"
+	DEFAULT_BASE = "0110"
+	DEFAULT_EXT = "0011"
+	DEFAULT_YEL = "0010"
+	EXT_SELECT = "01"
+	MAX_TIME = "1111"
+	YEL_SELECT = "10"
+	ZERO_TIME = "0000"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <TimeParameters>.
+	BASE_SELECT = 2'b00
+	DEFAULT_BASE = 4'b0110
+	DEFAULT_EXT = 4'b0011
+	DEFAULT_YEL = 4'b0010
+	EXT_SELECT = 2'b01
+	MAX_TIME = 4'b1111
+	YEL_SELECT = 2'b10
+	ZERO_TIME = 4'b0000
+Module <TimeParameters> is correct for synthesis.
+ 
+    Set user-defined property "KEEP =  TRUE" for signal <tBASE>.
+    Set user-defined property "KEEP =  TRUE" for signal <tEXT>.
+    Set user-defined property "KEEP =  TRUE" for signal <tYEL>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <TimeParameters>.
+    Related source file is "TimeParameters.v".
+    Found 4-bit register for signal <t_value_output>.
+    Found 4-bit 4-to-1 multiplexer for signal <t_value_output$mux0000> created at line 50.
+    Found 4-bit register for signal <tBASE>.
+    Found 4-bit 4-to-1 multiplexer for signal <tBASE$mux0000> created at line 87.
+    Found 4-bit register for signal <tEXT>.
+    Found 4-bit 4-to-1 multiplexer for signal <tEXT$mux0000> created at line 87.
+    Found 4-bit register for signal <tYEL>.
+    Found 4-bit 4-to-1 multiplexer for signal <tYEL$mux0000> created at line 87.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+	inferred  16 Multiplexer(s).
+Unit <TimeParameters> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 4
+ 4-bit register                                        : 4
+# Multiplexers                                         : 4
+ 4-bit 4-to-1 multiplexer                              : 4
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 16
+ Flip-Flops                                            : 16
+# Multiplexers                                         : 4
+ 4-bit 4-to-1 multiplexer                              : 4
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <TimeParameters> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block TimeParameters, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 16
+ Flip-Flops                                            : 16
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : TimeParameters.ngr
+Top Level Output File Name         : TimeParameters
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 15
+
+Cell Usage :
+# BELS                             : 21
+#      LUT3_L                      : 4
+#      LUT4                        : 17
+# FlipFlops/Latches                : 16
+#      FD                          : 4
+#      FDRE                        : 7
+#      FDSE                        : 5
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 14
+#      IBUF                        : 10
+#      OBUF                        : 4
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                       11  out of   4656     0%  
+ Number of Slice Flip Flops:             16  out of   9312     0%  
+ Number of 4 input LUTs:                 21  out of   9312     0%  
+ Number of IOs:                          15
+ Number of bonded IOBs:                  15  out of    232     6%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 16    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 2.937ns (Maximum Frequency: 340.483MHz)
+   Minimum input arrival time before clock: 4.166ns
+   Maximum output required time after clock: 4.283ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 2.937ns (frequency: 340.483MHz)
+  Total number of paths / destination ports: 24 / 16
+-------------------------------------------------------------------------
+Delay:               2.937ns (Levels of Logic = 2)
+  Source:            tEXT_0 (FF)
+  Destination:       t_value_output_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: tEXT_0 to t_value_output_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDSE:C->Q             2   0.591   0.526  tEXT_0 (tEXT<0>)
+     LUT3_L:I1->LO         1   0.704   0.104  Mmux_t_value_output_mux00002_SW0 (N13)
+     LUT4:I3->O            1   0.704   0.000  Mmux_t_value_output_mux00002 (t_value_output_mux0000<0>)
+     FD:D                      0.308          t_value_output_0
+    ----------------------------------------
+    Total                      2.937ns (2.307ns logic, 0.630ns route)
+                                       (78.5% logic, 21.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 81 / 40
+-------------------------------------------------------------------------
+Offset:              4.166ns (Levels of Logic = 3)
+  Source:            t_value_input<1> (PAD)
+  Destination:       tBASE_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: t_value_input<1> to tBASE_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   1.218   0.666  t_value_input_1_IBUF (t_value_input_1_IBUF)
+     LUT4:I1->O            3   0.704   0.566  tBASE_mux0001<0>1 (tBASE_mux0001<0>)
+     LUT4:I2->O            1   0.704   0.000  Mmux_tYEL_mux000011 (tYEL_mux0000<0>)
+     FDRE:D                    0.308          tYEL_0
+    ----------------------------------------
+    Total                      4.166ns (2.934ns logic, 1.232ns route)
+                                       (70.4% logic, 29.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              4.283ns (Levels of Logic = 1)
+  Source:            t_value_output_3 (FF)
+  Destination:       t_value_output<3> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: t_value_output_3 to t_value_output<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.591   0.420  t_value_output_3 (t_value_output_3)
+     OBUF:I->O                 3.272          t_value_output_3_OBUF (t_value_output<3>)
+    ----------------------------------------
+    Total                      4.283ns (3.863ns logic, 0.420ns route)
+                                       (90.2% logic, 9.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 3.84 secs
+ 
+--> 
+
+
+Total memory usage is 511840 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

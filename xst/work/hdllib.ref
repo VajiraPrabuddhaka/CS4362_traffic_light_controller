@@ -1,0 +1,8 @@
+MO stateMachine NULL stateMachine.v vlg26/state_machine.bin 1531464065
+MO TimeParameters NULL TimeParameters.v vlg0B/_time_parameters.bin 1531464065
+MO debounce NULL debounce.v vlg1D/debounce.bin 1531386749
+MO WalkRegister NULL WalkRegister.v vlg24/_walk_register.bin 1531464065
+MO Synchronizer NULL Synchronizer.v vlg2E/_synchronizer.bin 1531464065
+MO MainController NULL MainController.v vlg59/_main_controller.bin 1531464065
+MO synchronize NULL synchronize.v vlg2C/synchronize.bin 1531464065
+MO timer NULL timer.v vlg09/timer.bin 1531464065

@@ -1,0 +1,37 @@
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o /home/vajira/Desktop/CS4362_traffic_light_controller/traffic_controller_test_isim_beh.exe -prj /home/vajira/Desktop/CS4362_traffic_light_controller/traffic_controller_test_beh.prj work.traffic_controller_test work.glbl 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "/home/vajira/Desktop/CS4362_traffic_light_controller/synchronize.v" into library work
+Analyzing Verilog file "/home/vajira/Desktop/CS4362_traffic_light_controller/WalkRegister.v" into library work
+Analyzing Verilog file "/home/vajira/Desktop/CS4362_traffic_light_controller/timer.v" into library work
+Analyzing Verilog file "/home/vajira/Desktop/CS4362_traffic_light_controller/TimeParameters.v" into library work
+Analyzing Verilog file "/home/vajira/Desktop/CS4362_traffic_light_controller/Synchronizer.v" into library work
+Analyzing Verilog file "/home/vajira/Desktop/CS4362_traffic_light_controller/stateMachine.v" into library work
+Analyzing Verilog file "/home/vajira/Desktop/CS4362_traffic_light_controller/MainController.v" into library work
+Analyzing Verilog file "/home/vajira/Desktop/CS4362_traffic_light_controller/traffic_controller_test.v" into library work
+Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:189 - "/home/vajira/Desktop/CS4362_traffic_light_controller/traffic_controller_test.v" Line 68: Size mismatch in connection of port <state>. Formal port size is 1-bit while actual signal size is 3-bit.
+WARNING:HDLCompiler:189 - "/home/vajira/Desktop/CS4362_traffic_light_controller/MainController.v" Line 50: Size mismatch in connection of port <t_value_input>. Formal port size is 4-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "/home/vajira/Desktop/CS4362_traffic_light_controller/MainController.v" Line 54: Size mismatch in connection of port <state>. Formal port size is 3-bit while actual signal size is 1-bit.
+Completed static elaboration
+Fuse Memory Usage: 95604 KB
+Fuse CPU Usage: 1090 ms
+Compiling module synchronize
+Compiling module Synchronizer
+Compiling module WalkRegister
+Compiling module TimeParameters
+Compiling module timer
+Compiling module stateMachine
+Compiling module MainController
+Compiling module traffic_controller_test
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 2 sub-compilation(s) to finish...
+Compiled 9 Verilog Units
+Built simulation executable /home/vajira/Desktop/CS4362_traffic_light_controller/traffic_controller_test_isim_beh.exe
+Fuse Memory Usage: 655760 KB
+Fuse CPU Usage: 1100 ms
+GCC CPU Usage: 770 ms

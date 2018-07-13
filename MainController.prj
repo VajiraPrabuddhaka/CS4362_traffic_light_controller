@@ -1,0 +1,7 @@
+verilog work "synchronize.v"
+verilog work "WalkRegister.v"
+verilog work "timer.v"
+verilog work "TimeParameters.v"
+verilog work "Synchronizer.v"
+verilog work "stateMachine.v"
+verilog work "MainController.v"

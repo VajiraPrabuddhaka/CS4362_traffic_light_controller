@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "/home/vajira/Desktop/CS4362_traffic_light_controller/timer.xst" -ofn "/home/vajira/Desktop/CS4362_traffic_light_controller/timer.syr" 
+xst -intstyle ise -ifn "/home/vajira/Desktop/CS4362_traffic_light_controller/timer.xst" -ofn "/home/vajira/Desktop/CS4362_traffic_light_controller/timer.syr" 
